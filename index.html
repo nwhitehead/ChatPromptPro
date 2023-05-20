@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Prompt PRO</title>
+    <script src="https://accounts.google.com/gsi/client"></script>
+</head>
+<body>
+
+    <div id="app"></div>
+    <script type="module">
+
+import { createApp } from 'vue';
+import { createRouter, createWebHistory } from 'vue-router';
+
+import App from './src/App.vue';
+import Hero from './src/Hero.vue';
+import NotFound from './src/NotFound.vue';
+
+import './src/main.css';
+
+const routes = [
+    { path: '/', component: Hero },
+];
+
+const router = createRouter({
+    history: createWebHistory(),
+    routes,
+});
+
+createApp(App).use(router).mount('#app');
+
+    </script>
+
+</body>
+</html>
