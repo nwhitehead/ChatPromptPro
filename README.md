@@ -1,4 +1,8 @@
-Thoughts for features:
+# ChatPrompt PRO
+
+This is the open-source project code for [ChatPrompt PRO](https://chatprompt.pro).
+
+## Features
 
 * Curated collection of amazing and working ChatGPT prompts
 * Easy interface, no copy&pasting needed
@@ -8,7 +12,7 @@ Thoughts for features:
 * Paid members get access to ChatGPT 4
 * Publish your own prompts and get paid when people use them
 
-# Links
+## Links
 
 Hacker News thread:
 https://news.ycombinator.com/item?id=35963936
