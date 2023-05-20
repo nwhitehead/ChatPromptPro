@@ -56,6 +56,7 @@ import { CurrencyDollarIcon } from '@heroicons/vue/24/outline'
           <h2 class="text-lg font-bold">Examples</h2>
           <p class="mt-1 text-sm text-gray-700">
             Every prompt includes demonstration examples showing what it can do.
+            Pick choices from dropdown menus and see what happens.
           </p>
         </div>
       </div>
@@ -67,7 +68,7 @@ import { CurrencyDollarIcon } from '@heroicons/vue/24/outline'
         <div>
           <h2 class="text-lg font-bold">Easy Interface</h2>
           <p class="mt-1 text-sm text-gray-700">
-            Easy to use right on the webpage, fill in your text and click to generate.
+            Easy to use right on the webpage. Fill in your text and click to generate.
             No complicated setup or copy/paste needed.
           </p>
         </div>
@@ -82,6 +83,7 @@ import { CurrencyDollarIcon } from '@heroicons/vue/24/outline'
           <h2 class="text-lg font-bold">Free sign up</h2>
           <p class="mt-1 text-sm text-gray-700">
             Join the community for free. Try out prompts immediately.
+            New users get FREE tokens.
           </p>
         </div>
       </div>
@@ -94,7 +96,7 @@ import { CurrencyDollarIcon } from '@heroicons/vue/24/outline'
           <h2 class="text-lg font-bold">Premium Accounts</h2>
           <p class="mt-1 text-sm text-gray-700">
             Paid accounts have access to premium-only prompts,
-            no monthly token limits, and upgraded AI models
+            no weekly token limits, and upgraded AI models
             (GPT-4).
           </p>
         </div>
