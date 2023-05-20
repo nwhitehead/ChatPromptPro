@@ -47,7 +47,7 @@ watch(authenticated, (value) => {
 // Google GIS scripts need the appAuthenticate callback to be in global window scope
 window.appAuthenticate = (arg) => {
     token.value = arg.credential;
-    updateConversationsFromServer();
+    // Update anything
 }
 
 </script>
@@ -62,8 +62,8 @@ window.appAuthenticate = (arg) => {
                 </router-link>
                 <router-link to="/browse" class="px-4">Browse</router-link>
                 <router-link to="/doc" class="px-4">Docs</router-link>
-                <router-link to="/support.html" class="px-4">Support</router-link>
-                <router-link to="/privacy.html" class="px-4">Privacy</router-link>
+                <router-link to="/support" class="px-4">Support</router-link>
+                <router-link to="/privacy" class="px-4">Privacy</router-link>
             </div>
 
             <div v-show="!authenticated" id="googleButton" class="my-4"></div>

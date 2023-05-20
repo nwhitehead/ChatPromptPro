@@ -95,7 +95,7 @@ import { CurrencyDollarIcon } from '@heroicons/vue/24/outline'
           <p class="mt-1 text-sm text-gray-700">
             Paid accounts have access to premium-only prompts,
             no monthly token limits, and upgraded AI models
-            (ChatGPT 4).
+            (GPT-4).
           </p>
         </div>
       </div>
@@ -120,7 +120,7 @@ import { CurrencyDollarIcon } from '@heroicons/vue/24/outline'
         <div class="my-8">
             <p>
                 Using this site means agreeing to the
-                <router-link to="/terms_of_service.html" class="text-blue-700 hover:text-blue-500">
+                <router-link to="/terms" class="text-blue-700 hover:text-blue-500">
                     Terms of Service.
                 </router-link>
             </p>
