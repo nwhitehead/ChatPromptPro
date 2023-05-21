@@ -20,3 +20,10 @@ export const router = createRouter({
     history: createWebHistory(),
     routes,
 });
+
+let uuid = 0;
+
+export function generateUUID() {
+    uuid++;
+    return uuid.toString();
+}

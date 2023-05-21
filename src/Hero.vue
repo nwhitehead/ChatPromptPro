@@ -13,14 +13,14 @@ import { CurrencyDollarIcon } from '@heroicons/vue/24/outline'
 
 <template>
     <div class="flex flex-col items-center justify-center pt-12 w-full">
-        <div class="text-5xl md:text-7xl font-display font-semibold text-gray-800">
+        <div class="text-5xl md:text-7xl font-display font-semibold text-zinc-800">
             <p>
                 Chat Prompt PRO
             </p>
         </div>
         <div class="my-8">
             <p class="my-4 text-lg text-gray-800">
-                Unleash the power of AI for your business with PRO prompts.
+                Create custom AI tools for your business to use anywhere. No coding needed.
             </p>
         </div>
 
@@ -30,7 +30,7 @@ import { CurrencyDollarIcon } from '@heroicons/vue/24/outline'
       <h2 class="text-3xl font-bold sm:text-4xl">Features</h2>
 
       <p class="mt-4 text-gray-700">
-         Motto
+         Unleash the power of AI.
       </p>
     </div>
 
@@ -43,7 +43,7 @@ import { CurrencyDollarIcon } from '@heroicons/vue/24/outline'
         <div>
           <h2 class="text-lg font-bold">High Quality</h2>
           <p class="mt-1 text-sm text-gray-700">
-            Curated collection of amazing and working prompts that can start working for your business instantly.
+            Curated collection of amazing and working prompts to get you started instantly.
           </p>
         </div>
       </div>
@@ -82,7 +82,7 @@ import { CurrencyDollarIcon } from '@heroicons/vue/24/outline'
         <div>
           <h2 class="text-lg font-bold">Free sign up</h2>
           <p class="mt-1 text-sm text-gray-700">
-            Join the community for free. Try out prompts immediately.
+            Join the community for free. Try out prompts, create your own variations with a click.
             New users get FREE tokens.
           </p>
         </div>
@@ -96,7 +96,7 @@ import { CurrencyDollarIcon } from '@heroicons/vue/24/outline'
           <h2 class="text-lg font-bold">Premium Accounts</h2>
           <p class="mt-1 text-sm text-gray-700">
             Paid accounts have access to premium-only prompts,
-            no weekly token limits, and upgraded AI models
+            large token limits, and upgraded AI models
             (GPT-4).
           </p>
         </div>
@@ -109,8 +109,7 @@ import { CurrencyDollarIcon } from '@heroicons/vue/24/outline'
         <div>
           <h2 class="text-lg font-bold">Publish Prompts</h2>
           <p class="mt-1 text-sm text-gray-700">
-            Publish your own prompts for others, get paid when people use them.
-            No programming required.
+            Publish your own prompts.
           </p>
         </div>
       </div>

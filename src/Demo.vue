@@ -1,4 +1,5 @@
 <script setup>
+import Dropdown from './Dropdown.vue';
 
 </script>
 
@@ -8,6 +9,7 @@
             <p>
                 Demo Pages
             </p>
+            <Dropdown :label="'Theme'" :items="['Fairy tale', 'Love lost']" />
         </div>
     </div>
 </template>
