@@ -6,7 +6,7 @@ import { GOOGLE_PROJECT_ID } from './config.js';
 </script>
 
 <template>
-    <div class="w-full top-0 bg-white">
+    <div class="w-full top-0 bg-stone-50">
         <div class="max-w-screen-xl px-16 py-20 lg:mx-auto flex justify-between items-center h-16 min-w-[350px]">
             <div class="flex flex-row items-center">
                 <div class="bg-blue-500 w-[5px] h-[2em]">
@@ -19,18 +19,45 @@ import { GOOGLE_PROJECT_ID } from './config.js';
         </div>
     </div>
 
-    <div class="min-w-[300px] pt-16 w-full bg-white">
+    <div class="min-w-[300px] w-full bg-stone-50">
         <div>
             <router-view>
             </router-view>
         </div>
     </div>
 
-    <div class="px-20 pt-15 py-20 text-gray-500 border-t flex flex-col max-w-screen-xl xl:mx-auto">
-        <p class="pr-4">Copyright © 2023, Nathan Whitehead.</p>
-        <div class="flex flex-row pt-4">
-            <p class="pr-2">Made with</p><div class="grayscale hover:grayscale-0 hover:animate-wiggle">💖</div>
+<footer>
+    <div class="mx-auto max-w-screen-xl px-4 pt-0 pb-16 md:px-12">
+        <div class="mt-8 border-t border-stone-100 pt-8 text-sm text-stone-600">
+            <div class="sm:flex sm:justify-between">
+                <p>
+                    &copy; 2023. Nathan Whitehead. All rights reserved.
+                </p>
+                <nav aria-label="Footer Navigation - Support" class="mt-4 sm:mt-0">
+                    <ul class="flex flex-wrap justify-start gap-4 text-xs lg:justify-end">
+                        <li>
+                            <a href="#" class="transition hover:opacity-75">
+                                Terms & Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="transition hover:opacity-75">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="transition hover:opacity-75">
+                                Cookies
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex flex-row">
+                <p class="pr-2">Made with</p><div class="grayscale hover:grayscale-0 hover:animate-wiggle hover:cursor-default">💖</div>
+            </div>
         </div>
     </div>
+</footer>
 
 </template>
