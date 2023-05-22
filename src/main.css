@@ -9,13 +9,19 @@ body {
     @apply font-special;
 }
 .btn {
-    @apply font-bold py-2 px-4 mr-2 rounded relative;
+    @apply font-bold py-2 px-4 rounded relative shadow;
 }
 .btn-blue {
     @apply btn bg-blue-500 text-white;
 }
 .btn-blue:hover {
     @apply bg-blue-700;
+}
+.btn-green {
+    @apply btn bg-green-500 text-white;
+}
+.btn-green:hover {
+    @apply bg-green-700;
 }
 .btn-red {
     @apply btn bg-red-500 text-white;

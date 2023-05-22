@@ -8,6 +8,7 @@ import { UsersIcon } from '@heroicons/vue/24/outline'
 import { CreditCardIcon } from '@heroicons/vue/24/outline'
 import { BookOpenIcon } from '@heroicons/vue/24/outline'
 import { PaperAirplaneIcon } from '@heroicons/vue/24/outline'
+import { KeyIcon } from '@heroicons/vue/24/outline'
 
 </script>
 
@@ -90,7 +91,7 @@ import { PaperAirplaneIcon } from '@heroicons/vue/24/outline'
                 <div>
                     <h2 class="text-lg font-bold">High Quality</h2>
                     <p class="mt-1 text-sm text-gray-700">
-                        Curated collection of amazing and working prompts to get you started instantly.
+                        Curated collection of amazing and working prompts to inspire you and get you started instantly.
                     </p>
                 </div>
             </div>
@@ -102,8 +103,8 @@ import { PaperAirplaneIcon } from '@heroicons/vue/24/outline'
                 <div>
                     <h2 class="text-lg font-bold">Examples</h2>
                     <p class="mt-1 text-sm text-gray-700">
-                        Every pre-made prompt includes demonstration examples showing what it can do.
-                        Pick choices from dropdown menus and see what happens.
+                        Add demonstration examples showing what your prompt can do.
+                        Users pick choices from dropdown menus and see what happens.
                     </p>
                 </div>
             </div>
@@ -137,14 +138,13 @@ import { PaperAirplaneIcon } from '@heroicons/vue/24/outline'
 
             <div class="flex items-start gap-4">
                 <span class="shrink-0 rounded-lg bg-blue-300 p-4">
-                        <CreditCardIcon class="h-6 w-6" />
+                        <KeyIcon class="h-6 w-6" />
                 </span>
                 <div>
-                    <h2 class="text-lg font-bold">Premium Accounts</h2>
+                    <h2 class="text-lg font-bold">Private Internals</h2>
                     <p class="mt-1 text-sm text-gray-700">
-                        Paid accounts have access to the full prompt library,
-                        large token limits, and upgraded AI models
-                        (GPT-4). Publish your prompt tool with your own branding.
+                        Expose exactly the parts of your prompt that you want.
+                        Users see what you choose.
                     </p>
                 </div>
             </div>
@@ -157,7 +157,9 @@ import { PaperAirplaneIcon } from '@heroicons/vue/24/outline'
                     <h2 class="text-lg font-bold">Publish</h2>
                     <p class="mt-1 text-sm text-gray-700">
                         Publish your own prompts as standalone AI tools. Share as a link or
-                        embed direclty into your site.
+                        embed direclty into your site. Paid accounts have upgraded
+                        token limits, access to cutting edge AI models (GPT-4),
+                        and customized branding.
                     </p>
                 </div>
             </div>
@@ -211,7 +213,7 @@ import { PaperAirplaneIcon } from '@heroicons/vue/24/outline'
           </div>
           <!-- Pricing Card -->
           <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-              <h3 class="mb-4 text-2xl font-semibold">Hobby</h3>
+              <h3 class="mb-4 text-2xl font-semibold">Project</h3>
               <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best option for personal use or small teams & for your next project.</p>
               <div class="flex justify-center items-baseline my-8">
                   <span class="mr-2 text-5xl font-extrabold">$19</span>
