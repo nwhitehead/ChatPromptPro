@@ -2,6 +2,9 @@
 import Dropdown from './Dropdown.vue';
 import Editor from '@tinymce/tinymce-vue';
 import { PlusIcon } from '@heroicons/vue/24/outline'
+import demo_out_1_md from '../demo_out_1.md?raw';
+import { marked } from 'marked';
+import DOMPurify from 'dompurify';
 
 </script>
 
@@ -115,6 +118,59 @@ import { PlusIcon } from '@heroicons/vue/24/outline'
         </div>
 
         <p class="my-20" />
+
+        <div class="flex flex-col justify-items-start max-w-xl">
+
+            <h1 class="text-4xl py-8">
+                Marketing Campaign Generator
+            </h1>
+
+            <p class="mt-4">
+                This tool generates email templates for an email campaign for prospective
+                customers for your business. Fill in the form and click "Submit" to
+                get your personalized results.
+            </p>
+
+            <p class="mt-4">
+                Enter the product or service you are offering:
+            </p>
+            <input
+                type="text"
+                id="promptname"
+                placeholder="an office cleaning service"
+                class="w-full rounded-md border-gray-200 px-2 py-2.5 pe-10 shadow-lg sm:text-sm"
+                value="an office cleaning service"
+            />
+
+            <p class="mt-4">
+                Your ideal customer persona:
+            </p>
+            <input
+                type="text"
+                id="promptname"
+                placeholder="Idea Generator"
+                class="w-full rounded-md border-gray-200 px-2 py-2.5 pe-10 shadow-lg sm:text-sm"
+                value="large commercial building property manager"
+            />
+
+            <p class="mt-4">
+                What problem does your persona have that you can address?
+            </p>
+            <input
+                type="text"
+                id="promptname"
+                placeholder="Idea Generator"
+                class="w-full rounded-md border-gray-200 px-2 py-2.5 pe-10 shadow-lg sm:text-sm"
+                value="unreliable existing cleaning service"
+            />
+
+            <button type="button" class="btn-green my-4 py-2">Submit</button>
+
+            <div class="mt-4 [&_p]:my-2 [&_hr]:my-4"
+                v-html="DOMPurify.sanitize(marked.parse(demo_out_1_md))" />
+        </div>
+
+
         <p class="my-20" />
         <p class="my-20" />
     </div>

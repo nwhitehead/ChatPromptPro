@@ -68,8 +68,8 @@ Example:
 Followups:
 
 * Rewrite the suggestions but with more energy and pizzazz
-* Rewrite the suggestions with a more formal tone
-* Rewrite the suggestions with a more informal tone
+* Rewrite the suggestions with a more relaxed and informal tone
+* Rewrite the suggestions with a more formal and old-fashioned tone
 * Rewrite the suggestions taking into account _______
 
 Did a test, this prompt with rewriting took 1400 tokens with GPT-4.
