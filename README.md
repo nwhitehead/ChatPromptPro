@@ -45,17 +45,15 @@ Write an email marketing campaign using the 'Awareness-Comprehension-Conviction-
 
 
 
- I'm looking to write marketing copy to make my email marketing more engaging.
+I'm looking to write marketing copy to make my email marketing more engaging.
 
 The product I'm promoting is [product/service].
 
 My target customer is [ideal customer persona].
 
-
 The problem I want to address for this ideal customer is [problem].
 
 Write an email marketing campaign using the 'Awareness-Comprehension-Conviction-Action' framework to present the situation or problem faced by this ideal potential customer and help them understand it. Create the desired conviction in the reader to use our product/service as the solution and make them take action.
-
 
 Suggest 5 email subject lines for the campaign that could be sent one week apart to a prospect (not a customer) to get their interest and encourage them to ask for a quote. For each subject line briefly explain why you chose that line.
 
@@ -63,13 +61,24 @@ Example:
 
 [[an office cleaning service]]
 
-[[large commercial building manager that already has an office cleaning service]]
+[[large commercial building property manager]]
 
-[[unreliable services and lack of attention to detail]]
+[[unreliable existing cleaning services]]
 
+Followups:
+
+* Rewrite the suggestions but with more energy and pizzazz
+* Rewrite the suggestions with a more formal tone
+* Rewrite the suggestions with a more informal tone
+* Rewrite the suggestions taking into account _______
+
+Did a test, this prompt with rewriting took 1400 tokens with GPT-4.
 
 
 ## Links
+
+Graphics resources
+<a href="https://www.freepik.com/free-vector/hand-drawn-arrow-set_15961277.htm#query=hand%20drawn%20arrows&position=0&from_view=search&track=ais">Image by alicia_mb</a> on Freepik
 
 Hacker News thread:
 https://news.ycombinator.com/item?id=35963936

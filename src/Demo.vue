@@ -1,6 +1,7 @@
 <script setup>
 import Dropdown from './Dropdown.vue';
 import Editor from '@tinymce/tinymce-vue';
+import { PlusIcon } from '@heroicons/vue/24/outline'
 
 </script>
 
@@ -98,16 +99,19 @@ import Editor from '@tinymce/tinymce-vue';
         <div class="flex flex-col justify-items-start">
 
             <h1 class="text-4xl py-8">
-                Add followup to your <span class="text-pink-700">PRO</span> Prompt
+                Add followups to your <span class="text-pink-700">PRO</span> Prompt
             </h1>
 
-            <Editor
-                :init="{
-                    plugins: 'lists link image table code help wordcount',
-                    promotion: false,
-                    branding: false,
-                }"
-            />
+            <input type="text" id="followup1" class="w-full my-2 rounded-md border-gray-200 px-2 py-2.5 pe-10 shadow-lg sm:text-sm"
+                value="Rewrite the suggestions but with more energy and pizzazz" />
+            <input type="text" id="followup1" class="w-full my-2 rounded-md border-gray-200 px-2 py-2.5 pe-10 shadow-lg sm:text-sm"
+                value="Rewrite the suggestions with a more informal tone" />
+            <input type="text" id="followup1" class="w-full my-2 rounded-md border-gray-200 px-2 py-2.5 pe-10 shadow-lg sm:text-sm"
+                value="Rewrite the suggestions with a more formal tone" />
+            <button type="button" class="btn-blue my-4 w-12 h-10">
+                <PlusIcon />
+            </button>
+            <button type="button" class="btn-green my-4 py-2">Submit</button>
         </div>
 
         <p class="my-20" />

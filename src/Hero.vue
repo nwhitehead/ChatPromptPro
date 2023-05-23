@@ -33,8 +33,8 @@ import { KeyIcon } from '@heroicons/vue/24/outline'
     <div class="max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8 mx-auto flex flex-row space-x-4 md:space-x-16">
         <div class="max-w-xl flex-1">
             <img
-                alt="Art"
-                src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                alt="Screenshot showing prompt text editor with yellow highlights"
+                src="/images/demo2.png"
                 class="w-full shadow-lg"
             />
             <h2 class="text-xl font-bold mt-6">
@@ -46,8 +46,8 @@ import { KeyIcon } from '@heroicons/vue/24/outline'
         </div>
         <div class="max-w-xl flex-1">
             <img
-                alt="Art"
-                src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                alt="Screenshot showing prompt editor with field options"
+                src="/images/demo3.png"
                 class="w-full shadow-lg"
             />
             <h2 class="text-xl font-bold mt-6">
@@ -75,8 +75,14 @@ import { KeyIcon } from '@heroicons/vue/24/outline'
 
 <section class="bg-blue-100 text-gray-800 px-12 w-full">
     <div class="max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8 mx-auto">
-        <div class="max-w-xl">
-            <h2 class="text-3xl font-bold sm:text-4xl">Features</h2>
+        <div class="max-w-xl flex flex-row">
+            <img
+                alt="Art"
+                src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                class="w-40 shadow-lg"
+            />
+
+            <h2 class="text-3xl font-bold sm:text-4xl ml-8">Features</h2>
 
             <p class="mt-4 text-gray-700">
             </p>
@@ -190,7 +196,7 @@ import { KeyIcon } from '@heroicons/vue/24/outline'
               <ul role="list" class="mb-8 space-y-4 text-left">
                   <li class="flex items-center space-x-3">
                       <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Create 1 prompt</span>
+                      <span>Publish up to 1 prompt</span>
                   </li>
                   <li class="flex items-center space-x-3">
                       <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -222,11 +228,11 @@ import { KeyIcon } from '@heroicons/vue/24/outline'
               <ul role="list" class="mb-8 space-y-4 text-left">
                   <li class="flex items-center space-x-3">
                       <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Create 10 prompts</span>
+                      <span>Publish 10 prompts</span>
                   </li>
                   <li class="flex items-center space-x-3">
                       <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Use prompts 1,000 times / month</span>
+                      <span>Use prompts 1000 times / month</span>
                   </li>
                   <li class="flex items-center space-x-3">
                       <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -245,10 +251,10 @@ import { KeyIcon } from '@heroicons/vue/24/outline'
           </div>
           <!-- Pricing Card -->
           <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-              <h3 class="mb-4 text-2xl font-semibold">Pro</h3>
-              <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best for serious companies .</p>
+              <h3 class="mb-4 text-2xl font-semibold">Company</h3>
+              <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best for serious companies.</p>
               <div class="flex justify-center items-baseline my-8">
-                  <span class="mr-2 text-5xl font-extrabold">$399</span>
+                  <span class="mr-2 text-5xl font-extrabold">$59</span>
                   <span class="text-gray-500 dark:text-gray-400">/month</span>
               </div>
               <ul role="list" class="mb-8 space-y-4 text-left">
@@ -258,7 +264,7 @@ import { KeyIcon } from '@heroicons/vue/24/outline'
                   </li>
                   <li class="flex items-center space-x-3">
                       <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Use prompts 10,000 times / month</span>
+                      <span>Use prompts 5,000 times / month</span>
                   </li>
                   <li class="flex items-center space-x-3">
                       <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
