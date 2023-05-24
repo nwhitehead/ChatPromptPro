@@ -36,17 +36,17 @@ import { GOOGLE_PROJECT_ID } from './config.js';
                 <nav aria-label="Footer Navigation - Support" class="mt-4 sm:mt-0">
                     <ul class="flex flex-wrap justify-start gap-4 text-xs lg:justify-end">
                         <li>
-                            <router-link to="/terms" class="transition hover:opacity-75">
+                            <router-link to="/terms" class="legal-link">
                                 Terms & Conditions
                             </router-link>
                         </li>
                         <li>
-                            <router-link to="/privacy" class="transition hover:opacity-75">
+                            <router-link to="/privacy" class="legal-link">
                                 Privacy Policy
                             </router-link>
                         </li>
                         <li>
-                            <router-link to="/cookies" class="transition hover:opacity-75">
+                            <router-link to="/cookies" class="legal-link">
                                 Cookies
                             </router-link>
                         </li>

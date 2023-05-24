@@ -172,6 +172,41 @@ import DOMPurify from 'dompurify';
 
 
         <p class="my-20" />
+
+        <div class="flex flex-col justify-items-start">
+
+            <h1 class="text-4xl py-8">
+                Success!
+            </h1>
+            <h2 class="text-2xl py-8">
+                Created your Chat Prompt <span class="text-pink-700">PRO</span> Prompt
+            </h2>
+            <p>
+                Public link for sharing anywhere: <br>
+                <a class="link" href="https://chatprompt.pro/public/prompt/bab253f0-f98d">https://chatprompt.pro/public/prompt/bab253f0-f98d</a>
+            </p>
+            <p>
+                To embed directly on your website, copy this code onto your webpage:
+                <code><pre class="my-4">
+&lt;script src="http://chatprompt.pro/script.js" type="text/javascript"&gt;&lt;/script&gt;
+                </pre></code>
+                Wherever you would like a tool to appear, put a <pre>div</pre> element with attribute <pre>data-chatpromptpro-id</pre>
+                set to the ID number of your prompt. For example:
+                <code><pre class="my-4">
+&lt;div style="width:800px;height:600px" data-chatprompt-id="bab253f0-f98d" /&gt;
+                </pre></code>
+            </p>
+        </div>
+
+        <p class="my-20" />
+
+        <div style="width:800px;height:600px" class="bg-blue-400">
+        hi
+        </div>
+
+        <p class="my-20" />
+        <p class="my-20" />
+        <p class="my-20" />
         <p class="my-20" />
     </div>
 </template>

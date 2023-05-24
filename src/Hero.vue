@@ -163,9 +163,7 @@ import { KeyIcon } from '@heroicons/vue/24/outline'
                     <h2 class="text-lg font-bold">Publish</h2>
                     <p class="mt-1 text-sm text-gray-700">
                         Publish your own prompts as standalone AI tools. Share as a link or
-                        embed direclty into your site. Paid accounts have upgraded
-                        token limits, access to cutting edge AI models (GPT-4),
-                        and customized branding.
+                        embed direclty into your site.
                     </p>
                 </div>
             </div>
@@ -223,7 +221,7 @@ import { KeyIcon } from '@heroicons/vue/24/outline'
               <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best option for personal use or small teams & for your next project.</p>
               <div class="flex justify-center items-baseline my-8">
                   <span class="mr-2 text-5xl font-extrabold">$19</span>
-                  <span class="text-gray-500 dark:text-gray-400" dark:text-gray-400>/month</span>
+                  <span class="text-gray-500 dark:text-gray-400" dark:text-gray-400>/ month</span>
               </div>
               <ul role="list" class="mb-8 space-y-4 text-left">
                   <li class="flex items-center space-x-3">
@@ -232,7 +230,7 @@ import { KeyIcon } from '@heroicons/vue/24/outline'
                   </li>
                   <li class="flex items-center space-x-3">
                       <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Use prompts 1000 times / month</span>
+                      <span>Use prompts 1,000 times / month</span>
                   </li>
                   <li class="flex items-center space-x-3">
                       <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -255,12 +253,12 @@ import { KeyIcon } from '@heroicons/vue/24/outline'
               <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best for serious companies.</p>
               <div class="flex justify-center items-baseline my-8">
                   <span class="mr-2 text-5xl font-extrabold">$59</span>
-                  <span class="text-gray-500 dark:text-gray-400">/month</span>
+                  <span class="text-gray-500 dark:text-gray-400">/ month</span>
               </div>
               <ul role="list" class="mb-8 space-y-4 text-left">
                   <li class="flex items-center space-x-3">
                       <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Publish up to 100 prompts</span>
+                      <span>Publish up to 50 prompts</span>
                   </li>
                   <li class="flex items-center space-x-3">
                       <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -280,14 +278,49 @@ import { KeyIcon } from '@heroicons/vue/24/outline'
                   </li>
                   <li class="flex items-center space-x-3">
                       <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Fully customizable code</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Run backend API interface server on your hardware</span>
+                      <span>Fully customizable code with unlimited redistribution rights</span>
                   </li>
               </ul>
               <a href="#" class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Get started</a>
+          </div>
+          <!-- Pricing Card -->
+          <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-pink-100 bg-pink-900 rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+              <h3 class="mb-4 text-2xl font-semibold">Rocket Fuel Package</h3>
+              <p class="font-light text-pink-300 sm:text-lg dark:text-pink-400">Best for more intensive users.</p>
+              <div class="flex justify-center items-baseline my-8">
+                  <span class="mr-2 text-5xl font-extrabold">$199</span>
+                  <span class="text-pink-300 dark:text-gray-400">/ month</span>
+              </div>
+              <ul role="list" class="mb-8 space-y-4 text-left">
+                  <li class="flex items-center space-x-3">
+                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                      <span>Publish unlimited prompts</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                      <span>Use prompts 100,000 times / month</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                      <span>Publish with your own branding, resell and white-label for clients</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                      <span>Priority email support</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                      <span>Share with public link, embed code, and platform plugins</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                      <span>Fully customizable code with unlimited redistribution rights</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                      <span>Client management support for white-label distribution</span>
+                  </li>
+              </ul>
           </div>
       </div>
   </div>

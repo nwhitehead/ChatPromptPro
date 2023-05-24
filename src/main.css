@@ -50,3 +50,9 @@ span.note {
 .btn-tag {
     @apply absolute text-[0.5em] text-white top-0 right-0 h-4 w-4;
 }
+.legal-link {
+    @apply transition hover:opacity-75;
+}
+.link {
+    @apply transition hover:opacity-75 text-blue-700;
+}
