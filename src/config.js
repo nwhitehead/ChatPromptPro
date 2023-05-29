@@ -3,7 +3,6 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import Chat from './Chat.vue';
 import Hero from './Hero.vue';
-import Demo from './Demo.vue';
 import NotFound from './NotFound.vue';
 
 
@@ -14,7 +13,6 @@ export const GOOGLE_PROJECT_ID="610703108422-bnh8qtob09pm06c9sb0nties8g9rn3i9.ap
 export const routes = [
     { path: '/', component: Hero },
     { path: '/chat', component: Chat},
-    { path: '/demo', component: Demo },
     { path: '/:pathMatch(.*)', component: NotFound },
 ];
 

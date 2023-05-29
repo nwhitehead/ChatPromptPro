@@ -1,8 +1,6 @@
 <script setup>
 import Dropdown from './Dropdown.vue';
-import Editor from '@tinymce/tinymce-vue';
 import { PlusIcon } from '@heroicons/vue/24/outline'
-import demo_out_1_md from '../demo_out_1.md?raw';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import demo_convo from '../dialog.json?json';
