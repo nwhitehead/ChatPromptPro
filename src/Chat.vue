@@ -5,6 +5,12 @@ import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import demo_convo from '../dialog.json?json';
 import chatgpt_img from '../images/chatgpt.png';
+import { WS_SERVER } from './config.js';
+
+let connection = new WebSocket(`${WS_SERVER}/api/v1/wschat`);
+connection.addEventListener("message", (event) => {
+    console.log('Vue app got message', event);
+});
 
 //const dialog = defineProps(['dialog']);
 const dialog = demo_convo;
@@ -15,9 +21,21 @@ function striped(item) {
     };
 }
 
+function handleClick(msg) {
+    console.log('click');
+    const request = {
+        tag: "chat",
+        data: msg,
+    }
+    connection.send(JSON.stringify(request));
+}
+
 </script>
 
 <template>
+    <button @click="handleClick('Say hi')">HI</button>
+    <button @click="handleClick('Say bye')">BYE</button>
+
     <div class="flex flex-col items-center justify-center pt-12 w-full">
         <div class="text-5xl md:text-7xl font-display font-semibold text-gray-800">
             <p>
