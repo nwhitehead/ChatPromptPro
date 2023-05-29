@@ -18,12 +18,12 @@ import { KeyIcon } from '@heroicons/vue/24/outline'
     <div class="flex flex-col items-center justify-center px-16 container mx-auto max-w-screen-xl">
         <div class="text-4xl md:text-6xl font-display font-semibold text-blue-950">
             <p class="text-center leading-relaxed">
-                Chat with an AI using <span class="text-pink-700">conversation trees</span>
+                AI chat using <span class="text-pink-700">conversation trees</span>
             </p>
         </div>
         <div class="my-8">
             <p class="my-4 text-lg text-blue-950">
-                A more effective interface for ChatGPT for serious work
+                A more effective interface to ChatGPT for serious work
             </p>
         </div>
     </div>

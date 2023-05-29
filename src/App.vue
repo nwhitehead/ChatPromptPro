@@ -1,7 +1,6 @@
 <script setup>
 
 import { computed, reactive, ref, onMounted, watch } from 'vue';
-import { GOOGLE_PROJECT_ID } from './config.js';
 
 </script>
 
