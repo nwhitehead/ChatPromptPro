@@ -13,6 +13,22 @@ This is the open-source project code for [ChatPrompt PRO](https://chatprompt.pro
 * Auto task suggestions
 * Integration with Mechanical Turk for human evaluation
 
+## Protocol
+
+Vue app - JavaScript wants to call OpenAI ChatGPT API to do response to a set of messages. Connects to websocket
+endpoint in backend Express server. Server talks to OpenAI endpoint and keeps track of streamed HTTP response.
+Replies with multiple ws messages back to Vue client. All communication of messages on ws is with JSON strings.
+
+Requests:
+    - tag: chat | stop
+    - id: unique identifier for request (to distinguish from other simultaneous reqs on same ws address)
+    - data: stuff that OpenAI accepts (e.g. model, messages, temperature, etc.) stream must be true
+
+Responses:
+    - tag: update | done
+    - id: unique identifier from request
+    - data: current piece of text generated (one token I think) | reason for being done (error | length | ...)
+
 ## Some References
 
 Microsoft Guidance

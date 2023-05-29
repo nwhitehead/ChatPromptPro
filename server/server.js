@@ -48,66 +48,48 @@ async function* streamCompletion(data) {
     yield* linesToMessages(chunksToLines(data));
 }
 
-app.ws("/api/v1/echo", async (ws, req) => {
-    ws.on("message", async (msg) => {
-        ws.send(msg + " back at ya");
-    });
-});
-
 app.ws("/api/v1/wschat", async (ws, req) => {
     ws.on("message", async (msg) => {
         try {
             const req = JSON.parse(msg);
+            console.log('ws://api/v1/wschat', req);
             if (req.tag === "stop") {
                 console.log("stop generating received");
             }
             if (req.tag === "chat") {
                 console.log("start chat generation");
-                const response = {
-                    tag: 'reply',
-                    data: 'howdy dooty ' + req.data,
-                };
-                await new Promise(r => setTimeout(r, 2000));
-                ws.send(JSON.stringify(response));
+                const response = await openai.createChatCompletion(req.data, {
+                    responseType: "stream",
+                });
+                for await (const message of streamCompletion(response.data)) {
+                    try {
+                        const parsed = JSON.parse(message);
+                        console.log(parsed);
+                        const delta = parsed.choices[0].delta;
+                        const text = delta.content;
+                        if (text) {
+                            console.log(text);
+                            ws.send(JSON.stringify({
+                                tag: "update",
+                                id: req.id,
+                                data: text,
+                            }));
+                        } else if (parsed.choices[0].finish_reason) {
+                            ws.send(JSON.stringify({
+                                tag: "done",
+                                id: req.id,
+                                data: parsed.choices[0].finish_reason,
+                            }));
+                        }
+                    } catch (error) {
+                        console.error("Could not JSON parse stream message", message, error);
+                    }
+                }
             }
         } catch(error) {
             console.log("Could not parse JSON request on /api/v1/wschat");
         }
     });
-});
-
-
-app.get("/api/v1/chat", async (req, res) => {
-    const response = await openai.createChatCompletion({
-        model: "gpt-3.5-turbo",
-        messages: [{role: "system", content:"You are a helpful cheerful assistant."}, {role: "user", content: "Which is taller, an ant or a dog?"}],
-        temperature: 1.7,
-        max_tokens: 20,
-        stream: true,
-    }, {
-        responseType: "stream",
-    });
-
-    for await (const message of streamCompletion(response.data)) {
-        try {
-            const parsed = JSON.parse(message);
-            console.log(parsed);
-            const delta = parsed.choices[0].delta;
-            if (delta.content) {
-                const text = delta.content;
-                console.log(text);
-            }
-        } catch (error) {
-            console.error("Could not JSON parse stream message", message, error);
-        }
-    }
-    console.log('\n');
-    
-    res.json({
-        msg: 'This is an API response!',
-        from: 'Backend',
-    });
-
 });
 
 const { PORT = 5000 } = process.env;
