@@ -7,6 +7,7 @@ import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import demo_convo from '../dialog.json?json';
 import chatgpt_img from '../images/chatgpt.png';
+import me_img from '../images/me.png';
 import { generateUUID, WS_SERVER } from './config.js';
 
 // A map with keys of id and values of:
@@ -102,7 +103,7 @@ function handleClick(msg) {
                     <div class="flex gap-x-6 p-4 whitespace-pre-wrap">
                         <template v-if="item.who === 'human'">
                             <div class="w-[30px] whitespace-normal flex-none">
-                                <img :src="dialog.contents.avatar">
+                                <img :src="me_img">
                             </div>
                             <p>{{ item.what }}</p>
                         </template>
@@ -120,4 +121,17 @@ function handleClick(msg) {
             </div>
         </div>
     </div>
+
+    <div class="w-full fixed bottom-0 border-t bg-white pt-2">
+        <form class="mx-auto md:max-w-3xl stretch mx-2 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl">
+            <div class="relative flex h-full flex-1 items-stretch md:flex-col">
+                <div class="flex flex-col w-full py-2 flex-grow md:py-3 md:pl-4 md:pr-4 relative border border-black/10 bg-white rounded-md
+                    shadow-lg">
+                    <textarea class="m-0 w-full resize-none border-0 bg-transparent p-0 pr-7 focus:ring-0 focus-visible:ring-0 pl-2 md:pl-0"
+                        rows="1" placeholder="Send a message..." tabindex="0" id="prompt-textarea" />
+                </div>
+            </div>
+        </form>
+    </div>
+
 </template>
