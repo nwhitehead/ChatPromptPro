@@ -29,6 +29,17 @@ Responses:
     - id: unique identifier from request
     - data: current piece of text generated (one token I think) | reason for being done (error | length | ...)
 
+## Image prompts
+
+Using Canva AI image generator.
+
+* A drawing of a friendly robot that wants to help. [Dreamy style]
+
+* A diagram showing a tree of branching nodes with arrows, with a friendly robot watching the diagram. Sci-fi, colorful, retro futuristic. [retro anime style]
+
+* A robotic tree, tended by robotic farmers, in a sci-fi futuristic style, highly detailed, clean lines. [retro anime style]
+
+
 ## Some References
 
 Microsoft Guidance
