@@ -111,3 +111,11 @@ pre {
 footer ul {
     @apply list-none;
 }
+
+.bg-grid {
+    background-color: #333;
+    background-size: 24px 24px;
+    background-image:
+      linear-gradient(to right, #444 1px, transparent 1px),
+      linear-gradient(to bottom, #444 1px, transparent 1px);
+}

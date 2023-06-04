@@ -33,13 +33,32 @@ import RobotPNG from '../images/robot1.png';
     </div>
 </section>
 
-<section class="bg-pink-100 text-gray-800 px-12 w-full">
+<section class="bg-pink-100/50 text-gray-800 px-12 w-full">
     <div class="max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8 mx-auto">
-            <img
-                alt="Art"
-                :src="RobotPNG"
-                class="w-40 shadow-lg float-right"
-            />
+        <h2 class="text-3xl font-bold sm:text-4xl mb-2">The Problem</h2>
+        <img
+            alt="Art"
+            :src="RobotPNG"
+            class="w-40 shadow-lg float-right mx-4"
+        />
+        <p>
+            Using ChatGPT gives you a glimpse of a potential future where
+            conversational AI works with you as a partner and helps with all
+            kinds of work. Then reality sets in as you start to use it for more
+            than just toy examples. 
+        </p>
+        <p>
+            <ul class="list-none mt-0 space-y-2">
+                <li><span class="font-bold">Prompting</span> can be trickier than it appears. With trial and error you can develop powerful
+                and effective prompts. Once you have the prompts you like using them over and over again takes some annoying copy and paste work.
+                </li>
+                <li><span class="font-bold">Context</span> is the previous conversation that is given to ChatGPT at each step of response. Building
+                up a good context is crucial for ChatGPT to understand your domain, your problem, and what you want it to do. This might be either one
+                large initial prompt or a series of back-and-forth interaction. For more realistic projects, keeping track of the context for
+                multiple queries can be tricky. Conversations can grow out of control. Minor requests can side track an entire long conversation.
+                </li>
+            </ul>
+        </p>
     </div>
 </section>
 
@@ -55,7 +74,7 @@ import RobotPNG from '../images/robot1.png';
 
             <div class="flex flex-col items-start gap-4">
                 <span class="shrink-0 rounded-lg bg-blue-300 p-4">
-                        <CommandLineIcon class="h-8 w-8" />
+                        <CommandLineIcon class="h-10 w-10" />
                 </span>
                 <div>
                     <h2 class="text-lg font-bold">No coding? No problem!</h2>
@@ -68,7 +87,7 @@ import RobotPNG from '../images/robot1.png';
 
             <div class="flex flex-col items-start gap-4">
                 <span class="shrink-0 rounded-lg bg-blue-300 p-4">
-                        <ChatBubbleBottomCenterTextIcon class="h-8 w-8" />
+                        <ChatBubbleBottomCenterTextIcon class="h-10 w-10" />
                 </span>
                 <div>
                     <h2 class="text-lg font-bold">Maintain context, gain clarity</h2>
@@ -81,7 +100,7 @@ import RobotPNG from '../images/robot1.png';
 
             <div class="flex flex-col items-start gap-4">
                 <span class="shrink-0 rounded-lg bg-blue-300 p-4">
-                        <TrophyIcon class="h-8 w-8" />
+                        <TrophyIcon class="h-10 w-10" />
                 </span>
                 <div>
                     <h2 class="text-lg font-bold">Save time, increase productivity</h2>

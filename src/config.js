@@ -2,6 +2,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import Chat from './Chat.vue';
+import Demo from './Demo.vue';
 import Hero from './Hero.vue';
 import Join from './Join.vue';
 import NotFound from './NotFound.vue';
@@ -14,6 +15,7 @@ export const WS_SERVER = (import.meta.env.MODE === 'development') ? 'ws://localh
 export const routes = [
     { path: '/', component: Hero },
     { path: '/join', component: Join },
+    { path: '/demo', component: Demo },
     { path: '/chat', component: Chat},
     { path: '/:pathMatch(.*)', component: NotFound },
 ];
