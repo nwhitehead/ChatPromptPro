@@ -9,9 +9,9 @@ import demo_convo from '../dialog.json?json';
 
 const dialog = reactive([
     { who:'system', what:'You are a helpful and friendly assistant.'},
-    { who:'human', what:"I'm trying to write an email campaign about an office cleaning service. Suggest 5 email subjects and contents."},
+    { who:'human', what:"I'm trying to write an email campaign about ==an office cleaning service==. Suggest 5 email subjects and contents."},
     demo_convo.contents.dialog[1],
-    demo_convo.contents.dialog[2],
+    { who:'human', what:"Rewrite the suggestions but ==with more energy and pizzazz.=="},
     demo_convo.contents.dialog[3],
 ]);
 

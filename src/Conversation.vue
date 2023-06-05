@@ -1,12 +1,22 @@
 <script setup>
 
-import { marked } from 'marked';
+import MarkdownItModule from 'markdown-it';
+import MarkdownItAttrs from 'markdown-it-attrs';
+import MarkdownItIns from 'markdown-it-ins';
+import MarkdownItMark from 'markdown-it-mark';
+
 import DOMPurify from 'dompurify';
 import chatgpt_img from '../images/chatgpt.png';
 import me_img from '../images/me.png';
 import system_img from '../images/robot1.png';
 
 const props = defineProps(['dialog', 'options']);
+const md = new MarkdownItModule({
+
+})
+    .use(MarkdownItAttrs)
+    .use(MarkdownItIns)
+    .use(MarkdownItMark);
 
 function striped(item) {
     return {
@@ -14,12 +24,12 @@ function striped(item) {
     };
 }
 
-function getOption(name, default) {
+function getOption(name, defaultValue) {
     if (props.options === undefined) {
-        return default;
+        return defaultValue;
     }
     if (props.options.name === undefined) {
-        return default;
+        return defaultValue;
     }
     return props.options.name;
 }
@@ -43,7 +53,10 @@ function getOption(name, default) {
                             <div class="w-[30px] whitespace-normal flex-none">
                                 <img :src="me_img">
                             </div>
-                            <p>{{ item.what }}</p>
+                            <div
+                                class="markdown whitespace-normal"
+                                v-html="DOMPurify.sanitize(md.render(item.what))"
+                            />
                         </template>
                         <template v-if="item.who === 'gpt'">
                             <div class="w-[30px] whitespace-normal flex-none">
@@ -51,7 +64,7 @@ function getOption(name, default) {
                             </div>
                             <div
                                 class="markdown whitespace-normal"
-                                v-html="DOMPurify.sanitize(marked(item.what))"
+                                v-html="DOMPurify.sanitize(md.render(item.what))"
                             />
                         </template>
                     </div>

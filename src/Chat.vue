@@ -3,7 +3,6 @@
 import { reactive } from 'vue';
 import Dropdown from './Dropdown.vue';
 import { PlusIcon } from '@heroicons/vue/24/outline'
-import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import demo_convo from '../dialog.json?json';
 import chatgpt_img from '../images/chatgpt.png';
