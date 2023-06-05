@@ -57,7 +57,9 @@ span.note {
 .link {
     @apply transition hover:opacity-75 text-blue-700;
 }
-
+.expander {
+    @apply py-0 my-0 px-4 rounded relative shadow;
+}
 
 ol {
     @apply list-decimal;
