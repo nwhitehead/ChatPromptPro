@@ -27,13 +27,23 @@ import RobotPNG from '../images/robot1.png';
         </div>
         <div class="my-8">
             <p class="my-4 text-lg text-blue-950">
-                A more effective interface to ChatGPT for serious work
+                Don't miss out on this more effective interface to ChatGPT for serious work
             </p>
         </div>
     </div>
 </section>
 
-<section class="bg-pink-100/50 text-gray-800 px-12 w-full">
+<section>
+
+    <figure class="container mx-auto max-w-screen-xl flex flex-col items-center justify-center px-16 py-16">
+        <img src="../screenshot.svg" class="h-auto bg-white max-w-full border shadow-lg py-8 md:px-16" />
+        <figcaption class="mt-2 text-sm text-center text-stone-500 dark:text-gray-400">
+            Screenshot showing the branching interface for working with conversations.
+        </figcaption>
+    </figure>
+</section>
+
+<section class="bg-stone-200/50 text-gray-800 px-12 w-full">
     <div class="max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8 mx-auto">
         <h2 class="text-3xl font-bold sm:text-4xl mb-2">The Problem</h2>
         <img
@@ -42,10 +52,8 @@ import RobotPNG from '../images/robot1.png';
             class="w-40 shadow-lg float-right mx-4"
         />
         <p>
-            Using ChatGPT gives you a glimpse of a potential future where
-            conversational AI works with you as a partner and helps with all
-            kinds of work. Then reality sets in as you start to use it for more
-            than just toy examples. 
+            Getting started with ChatGPT is easy. But to use it for
+            more than just toy examples takes some work.
         </p>
         <p>
             <ul class="list-none mt-0 space-y-2">
@@ -53,9 +61,8 @@ import RobotPNG from '../images/robot1.png';
                 and effective prompts. Once you have the prompts you like using them over and over again takes some annoying copy and paste work.
                 </li>
                 <li><span class="font-bold">Context</span> is the previous conversation that is given to ChatGPT at each step of response. Building
-                up a good context is crucial for ChatGPT to understand your domain, your problem, and what you want it to do. This might be either one
-                large initial prompt or a series of back-and-forth interaction. For more realistic projects, keeping track of the context for
-                multiple queries can be tricky. Conversations can grow out of control. Minor requests can side track an entire long conversation.
+                up a good context is crucial for ChatGPT to understand your domain, your problem, and what you want it to do. 
+                For more realistic projects, keeping track of the context for multiple queries at different levels can be messy.
                 </li>
             </ul>
         </p>

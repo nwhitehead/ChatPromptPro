@@ -4,6 +4,7 @@ import { reactive } from 'vue';
 import Node from './Node.vue';
 import Conversation from './Conversation.vue';
 import demo_convo from '../dialog.json?json';
+import demodrawing_svg from '../demodrawing.svg';
 
 // reactive(demo_convo.contents.dialog)
 
@@ -26,6 +27,8 @@ const dialog = reactive([
             </p>
         </div>
     </div>
+
+    <img :src="demodrawing_svg" class="w-64" >
 
     <section class="">
         <Conversation :dialog="dialog" />
