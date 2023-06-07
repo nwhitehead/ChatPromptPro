@@ -74,7 +74,7 @@ function computedStyle() {
 
 <template>
 
-<div :style="computedStyle()" class="w-full h-full bg-stone-200">
+<div :style="computedStyle()">
 </div>
 
 </template>
