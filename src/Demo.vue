@@ -23,7 +23,11 @@ function leafData(w, h, c, children) {
 }
 
 const tree = leafData('40px', '40px', '#000', [
-    leafData('256px', '256px', '#f0f', []),
+    leafData('40px', '40px', '#f00', [
+        leafData('40px', '40px', '#0f0', [
+
+        ]),
+    ]),
     leafData('128px', '128px', '#ff0', []),
     leafData('128px', '200px', '#00f', []),
 ]);
@@ -41,7 +45,7 @@ const tree = leafData('40px', '40px', '#000', [
     </div>
 
     <div class="p-8 bg-stone-300/50">
-        <Tree :data="tree" :over="1" v-slot="{ data }">
+        <Tree :data="tree" v-slot="{ data }">
             <!-- This slot shows how to render data -->
             <div :style="
                 {

@@ -16,9 +16,10 @@ const props = defineProps(['data', 'over', 'pathColor', 'pathThickness']);
 // 'pathThickness': string thickness to draw connecting paths
 
 function computedStyleNode() {
+    const over = props.over || 0;
     return {
-        'grid-column-start': 2,
-        'grid-column-end': 2,
+        'grid-column-start': over + 1,
+        'grid-column-end': over + 1,
         'grid-row-start': 1,
         'grid-row-end': 1,
     }
@@ -35,13 +36,14 @@ function computedStyleChild(i) {
 
 function computedConnect(i, length) {
     let result = [ 'b' ];
+    const over = props.over || 0;
     if (i > 0) {
         result.push('l');
     }
     if (i < length - 1) {
         result.push('r');
     }
-    if (i === props.over) {
+    if (i === over) {
         result.push('t');
     }
     return result;
@@ -87,11 +89,11 @@ function computedStylePathDiv(i) {
             :style="computedStylePathDiv(index)"
             :connect="computedConnect(index, props.data.children.length)"
         />
-        <div
+        <Tree
             v-for="(item, index) in props.data.children"
             :style="computedStyleChild(index)">
             <slot :data="item"></slot>
-        </div>
+        </Tree>
     </div>
 
 </template>
