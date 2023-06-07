@@ -2,6 +2,8 @@
 
 import { reactive } from 'vue';
 import Node from './Node.vue';
+import PathDiv from './PathDiv.vue';
+import Tree from './Tree.vue';
 import Conversation from './Conversation.vue';
 import demo_convo from '../dialog.json?json';
 import demodrawing_svg from '../demodrawing.svg';
@@ -28,7 +30,16 @@ const dialog = reactive([
         </div>
     </div>
 
+    <div class="w-64 h-64 bg-red-400 overflow-scroll" style="resize:both;">
+        <PathDiv :connect="['l', 'b', 't']" :color="'#f00'" :thickness="'10px'" />
+    </div>
+
+    <div class="my-16" />
+
     <img :src="demodrawing_svg" class="w-64" >
+
+    <Tree :children="[]" :data="{}" />
+
 
     <section class="">
         <Conversation :dialog="dialog" />
