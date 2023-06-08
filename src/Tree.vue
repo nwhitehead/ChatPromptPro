@@ -69,7 +69,7 @@ function computedConnect(i, length) {
                     :data="item"
                     v-slot="{ data }"
                 >
-                    <slot :data="item"></slot>
+                    <slot :data="data"></slot>
                 </Tree>
             </div>
         </div>
