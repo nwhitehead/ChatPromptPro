@@ -22,7 +22,7 @@ function leafData(w, h, c, children) {
     return { 'w': w, 'h': h, 'background-color': c, 'children': children }
 }
 
-const tree = leafData('40px', '40px', '#000', [
+const tree = leafData('60px', '60px', '#000', [
     leafData('40px', '40px', '#f00', [
         leafData('40px', '40px', '#0f0', [
 

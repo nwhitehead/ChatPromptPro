@@ -33,38 +33,31 @@ function computedStyle() {
         'background-image': `linear-gradient(${color}, ${color})`,
         'background-repeat': 'no-repeat',
         'background-size': `${thickness} ${thickness}`,
-        'background-position': 'center center',
+        'background-position': 'center 0',
     };
     // Define four connectors
     const left = {
         'background-image': `linear-gradient(${color}, ${color})`,
         'background-repeat': 'no-repeat',
         'background-size': `50% ${thickness}`,
-        'background-position': '0 center',
+        'background-position': '0 0',
     };
     const right = {
         'background-image': `linear-gradient(${color}, ${color})`,
         'background-repeat': 'no-repeat',
         'background-size': `50% ${thickness}`,
-        'background-position': '100% center',
-    };
-    const top = {
-        'background-image': `linear-gradient(${color}, ${color})`,
-        'background-repeat': 'no-repeat',
-        'background-size': `${thickness} 50%`,
-        'background-position': 'center 0',
+        'background-position': '100% 0',
     };
     const bottom = {
         'background-image': `linear-gradient(${color}, ${color})`,
         'background-repeat': 'no-repeat',
-        'background-size': `${thickness} 50%`,
-        'background-position': 'center 100%',
+        'background-size': `${thickness} 100%`,
+        'background-position': 'center 0',
     };
     // Concatenate connectors to result
     for (const value of props.connect) {
         if (value === 'l') { concatenateStyle(result, left); }
         if (value === 'r') { concatenateStyle(result, right); }
-        if (value === 't') { concatenateStyle(result, top); }
         if (value === 'b') { concatenateStyle(result, bottom); }
     }
     return result;

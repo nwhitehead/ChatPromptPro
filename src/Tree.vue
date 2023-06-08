@@ -2,7 +2,7 @@
 
 import PathDiv from './PathDiv.vue';
 
-const props = defineProps(['data', 'over', 'pathColor', 'pathThickness']);
+const props = defineProps(['data', 'pathColor', 'pathThickness']);
 // slot (default) - will be given data to display a node in the tree
 // data - 
 //   generic data to be passed to slot to render current root node
@@ -14,25 +14,6 @@ const props = defineProps(['data', 'over', 'pathColor', 'pathThickness']);
 // 'over': int is which child should be shown centered below root
 // 'pathColor': string color to draw connecting paths
 // 'pathThickness': string thickness to draw connecting paths
-
-function computedStyleNode() {
-    const over = props.over || 0;
-    return {
-        'grid-column-start': over + 1,
-        'grid-column-end': over + 1,
-        'grid-row-start': 1,
-        'grid-row-end': 1,
-    }
-}
-
-function computedStyleChild(i) {
-    return {
-        'grid-column-start': i + 1,
-        'grid-column-end': i + 1,
-        'grid-row-start': 3,
-        'grid-row-end': 3,
-    }
-}
 
 function computedConnect(i, length) {
     let result = [ 'b' ];
@@ -49,51 +30,49 @@ function computedConnect(i, length) {
     return result;
 }
 
-function computedStylePathDiv(i) {
-    return {
-        'grid-column-start': i + 1,
-        'grid-column-end': i + 1,
-        'grid-row-start': 2,
-        'grid-row-end': 2,
-        'height': '20px',
-        'width': '100%',
-    }
-}
-
 </script>
+
+<style>
+.outer {
+    min-width: fit-content;
+    min-height: fit-content;
+    align-items: center;
+}
+.flexcol {
+    display: flex;
+    flex-direction: column;
+}
+.flexrow {
+    display: flex;
+    flex-direction: row;
+}
+.wfit {
+    width: fit-content;
+}
+.path {
+    height: 20px;
+    width: 100%;
+}
+</style>
 
 <template>
 
-    <!-- <div class="grid justify-items-center auto-cols-min min-w-fit min-h-fit">
-        <div class="col-start-2 col-end-2 row-start-1 row-end-1 bg-black w-8 h-8" />
-        <PathDiv class="h-4 w-full col-start-1 col-end-1 row-start-2 row-end-2" :connect="['b', 'r']" />
-        <PathDiv class="h-4 w-full col-start-2 col-end-2 row-start-2 row-end-2" :connect="['l', 'b', 't', 'r']" />
-        <PathDiv class="h-4 w-full col-start-3 col-end-3 row-start-2 row-end-2" :connect="['l', 'b']" />
-        <div class="col-start-1 col-end-1 row-start-3 row-end-3 bg-red-400 w-64 h-64" />
-        <div class="col-start-2 col-end-2 row-start-3 row-end-3 bg-yellow-400 w-32 h-32" />
-        <div class="col-start-3 col-end-3 row-start-3 row-end-3 bg-blue-400 w-32 h-48" />
-    </div> -->
-
-    <div :style="{
-        'display': 'grid',
-        'justify-items': 'center',
-        'grid-auto-columns': 'min-content',
-        'min-width': 'fit-content',
-        'min-height': 'fit-content',
-    }">
-        <div :style="computedStyleNode()">
+    <div class="outer flexcol wfit">
+        <div class="flexcol wfit">
             <slot :data="props.data"></slot>
+            <PathDiv v-if="props.data.children.length > 0" :connect="['b']" class="path" />
         </div>
-        <PathDiv
-            v-for="(item, index) in props.data.children"
-            :style="computedStylePathDiv(index)"
-            :connect="computedConnect(index, props.data.children.length)"
-        />
-        <Tree
-            v-for="(item, index) in props.data.children"
-            :style="computedStyleChild(index)">
-            <slot :data="item"></slot>
-        </Tree>
+        <div class="flexrow wfit">
+            <div v-for="(item, index) in props.data.children" class="flexcol">
+                <PathDiv :connect="computedConnect(index, props.data.children.length)" class="path" />
+                <Tree
+                    :data="item"
+                    v-slot="{ data }"
+                >
+                    <slot :data="item"></slot>
+                </Tree>
+            </div>
+        </div>
     </div>
 
 </template>
