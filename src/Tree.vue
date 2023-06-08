@@ -60,13 +60,14 @@ function computedConnect(i, length) {
     <div class="outer flexcol wfit">
         <div class="flexcol wfit">
             <slot :data="props.data"></slot>
-            <PathDiv v-if="props.data.children.length > 0" :connect="['b']" class="path" />
+            <PathDiv v-if="props.data.children.length > 0" :connect="['b']" :color="props.pathColor" class="path" />
         </div>
         <div class="flexrow wfit">
             <div v-for="(item, index) in props.data.children" class="flexcol">
-                <PathDiv :connect="computedConnect(index, props.data.children.length)" class="path" />
+                <PathDiv :connect="computedConnect(index, props.data.children.length)" :color="props.pathColor" class="path" />
                 <Tree
                     :data="item"
+                    :pathColor="props.pathColor"
                     v-slot="{ data }"
                 >
                     <slot :data="data"></slot>

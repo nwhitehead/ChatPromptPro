@@ -58,6 +58,14 @@ const md = new MarkdownItModule({
     .use(MarkdownItIns)
     .use(MarkdownItMark);
 
+function striped(item) {
+    return {
+        'bg-white/50': item.who === 'human',
+        'bg-stone-200/50': item.who === 'gpt',
+        'bg-blue-200/50': item.who === 'system',
+    };
+}
+
 </script>
 
 <template>
@@ -71,8 +79,8 @@ const md = new MarkdownItModule({
     </div>
 
     <div class="p-8 bg-stone-100/50">
-        <Tree :data="tree" v-slot="{ data }">
-            <div class="border flex gap-x-6 px-4 pt-4 whitespace-pre-wrap max-h-32">
+        <Tree :data="tree" :pathColor="'#bbb'" v-slot="{ data }">
+            <div :class="striped(data)" class="bg-stone-200/50 border border-stone-400 rounded shadow flex gap-x-4 mx-2 px-4 pt-4 whitespace-pre-wrap max-h-32 max-w-lg min-w-[200px]">
                 <template v-if="data.who === 'system'">
                     <div class="w-[30px] whitespace-normal flex-none">
                         <img :src="system_img">
