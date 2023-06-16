@@ -29,6 +29,8 @@ const dialog = reactive([
     demo_convo.contents.dialog[3],
 ]);
 
+const select = reactive([0]);
+
 const tree = {
     who: 'system',
     what: 'You are a helpful and friendly assistant.',
@@ -59,16 +61,27 @@ const md = new MarkdownItModule({
     .use(MarkdownItIns)
     .use(MarkdownItMark);
 
-function conversationClass(item) {
+function samePath(left, right) {
+    if (left.length !== right.length) {
+        return false;
+    }
+    for (let i = 0; i < left.length; i++) {
+        if (left[i] !== right[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function conversationClass(item, path) {
     return {
 // Stripe background based on participant
         'bg-white/50': item.who === 'human',
         'bg-stone-200/50': item.who === 'gpt',
         'bg-blue-200/50': item.who === 'system',
 // Select markers
-//        'border-double': item.selected,
-        'border-yellow-500': item.selected,
-        'border-4': item.selected,
+        'border-yellow-500': samePath(select, path),
+        'border-4': samePath(select, path),
     };
 }
 
@@ -85,8 +98,8 @@ function conversationClass(item) {
     </div>
 
     <div class="p-8 bg-stone-100/50">
-        <Tree :data="tree" :pathColor="'#bbb'" v-slot="{ data }">
-            <div :class="conversationClass(data)" class="bg-stone-200/50 border border-stone-400 rounded shadow flex gap-x-4 mx-2 px-4 pt-4 whitespace-pre-wrap max-h-32 max-w-lg min-w-[200px]">
+        <Tree :data="tree" :path="[]" :pathColor="'#bbb'" v-slot="{ data, path }">
+            <div :class="conversationClass(data, path)" class="bg-stone-200/50 border border-stone-400 rounded shadow flex gap-x-4 mx-2 px-4 pt-4 whitespace-pre-wrap max-h-32 max-w-lg min-w-[200px]">
                 <template v-if="data.who === 'system'">
                     <div class="w-[30px] whitespace-normal flex-none">
                         <img :src="system_img">
@@ -124,19 +137,5 @@ function conversationClass(item) {
     </div>
 
     <div class="my-16" />
-
-    <section class="">
-        <Conversation :dialog="dialog" />
-    </section>
-
-    <div class="py-32" />
-
-    <section class="px-12 w-full bg-grid">
-        <div class="max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8 mx-auto">
-            <div class="h-[800px;]">
-                <Node :x="200" :y="200" />
-            </div>
-        </div>
-    </section>
 
 </template>
