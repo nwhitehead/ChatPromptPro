@@ -40,6 +40,7 @@ const tree = {
         }, {
             who: 'human',
             what: "I'm trying to write an email campaign about ==a property management service==. Suggest 5 email subjects and contents.",
+            selected: true,
             children: [
                 {
                     who: 'gpt',
@@ -58,11 +59,16 @@ const md = new MarkdownItModule({
     .use(MarkdownItIns)
     .use(MarkdownItMark);
 
-function striped(item) {
+function conversationClass(item) {
     return {
+// Stripe background based on participant
         'bg-white/50': item.who === 'human',
         'bg-stone-200/50': item.who === 'gpt',
         'bg-blue-200/50': item.who === 'system',
+// Select markers
+//        'border-double': item.selected,
+        'border-yellow-500': item.selected,
+        'border-4': item.selected,
     };
 }
 
@@ -80,7 +86,7 @@ function striped(item) {
 
     <div class="p-8 bg-stone-100/50">
         <Tree :data="tree" :pathColor="'#bbb'" v-slot="{ data }">
-            <div :class="striped(data)" class="bg-stone-200/50 border border-stone-400 rounded shadow flex gap-x-4 mx-2 px-4 pt-4 whitespace-pre-wrap max-h-32 max-w-lg min-w-[200px]">
+            <div :class="conversationClass(data)" class="bg-stone-200/50 border border-stone-400 rounded shadow flex gap-x-4 mx-2 px-4 pt-4 whitespace-pre-wrap max-h-32 max-w-lg min-w-[200px]">
                 <template v-if="data.who === 'system'">
                     <div class="w-[30px] whitespace-normal flex-none">
                         <img :src="system_img">
