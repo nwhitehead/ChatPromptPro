@@ -4,7 +4,6 @@ import MarkdownItModule from 'markdown-it';
 import MarkdownItAttrs from 'markdown-it-attrs';
 import MarkdownItIns from 'markdown-it-ins';
 import MarkdownItMark from 'markdown-it-mark';
-import { ChevronDownIcon } from '@heroicons/vue/24/outline';
 
 import DOMPurify from 'dompurify';
 import chatgpt_img from '../images/chatgpt.png';
@@ -12,9 +11,7 @@ import me_img from '../images/me.png';
 import system_img from '../images/robot1.png';
 
 const props = defineProps(['dialog', 'options']);
-const md = new MarkdownItModule({
-
-})
+const md = new MarkdownItModule({})
     .use(MarkdownItAttrs)
     .use(MarkdownItIns)
     .use(MarkdownItMark);
@@ -71,9 +68,6 @@ function getOption(name, defaultValue) {
                                     class="markdown whitespace-normal overflow-scroll"
                                     v-html="DOMPurify.sanitize(md.render(item.what))"
                                 />
-                                <button class="py-2 my-0 px-4 relative">
-                                    <ChevronDownIcon class="h-4 w-4 mx-auto" />
-                                </button>
                             </div>
                         </template>
                     </div>
