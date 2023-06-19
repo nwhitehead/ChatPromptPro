@@ -57,13 +57,46 @@ function conversationClass(item) {
     <div class="my-32" />
 
     <div class="mt-8 max-w-md mx-auto">
-        <div class="">
-            <input 
-                type="text" 
-                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                value="10000"
-            />
-        </div>
+        <label class="block">
+                <span class="text-gray-700">Persona</span>
+                <input 
+                    type="text" 
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                    value="Marketer - NoFluff [Customized]"
+                />
+        </label>
+        <label class="block">
+                <span class="text-gray-700">Base prompt</span>
+                <textarea 
+                    rows="3"
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                    :value="`I'm designing a marketing campaign for my SaaS business. The business lets customers publish ebooks with beautiful formatting and typesetting using markdown and uploading artwork. Generate ==N== ideas for unique selling propositions in an email campaign. For each idea output an example email subject line and a sentence explaining the USP.`"
+                />
+        </label>
+        <label class="block">
+                <span class="text-gray-700">Iterations</span>
+                <input 
+                    type="text" 
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                    value="1000"
+                />
+        </label>
+        <label class="block">
+                <span class="text-gray-700">Output diversity strategy</span>
+                <input 
+                    type="text" 
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                    value="Default"
+                />
+        </label>
+        <label class="block">
+                <span class="text-gray-700">Rating strategy</span>
+                <input 
+                    type="text" 
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                    value="Attention [Customized]"
+                />
+        </label>
     </div>
 
     <div class="my-32" />
