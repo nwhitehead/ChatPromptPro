@@ -30,6 +30,7 @@ const dialog = reactive([
 ]);
 
 const select = reactive([0]);
+let lastSelectPosition = {};
 
 const tree = {
     who: 'system',
@@ -85,6 +86,55 @@ function conversationClass(item, path) {
     };
 }
 
+function handleUp() {
+    if (select.length > 0) {
+        lastSelectPosition[select.length - 1] = select[select.length - 1];
+        select.pop();
+    }
+}
+function handleDown() {
+    let t = tree;
+    for (let i = 0; i < select.length; i++) {
+        const choice = select[i];
+        t = t.children[choice];
+    }
+    const p = lastSelectPosition[select.length] || 0;
+    if (t.children.length > p) {
+        select.push(p);
+    }
+}
+function handleLeft() {
+    if (select.length > 0) {
+        const choice = select[select.length - 1];
+        if (choice > 0) {
+            select[select.length - 1] = choice - 1;
+        }
+    }
+}
+function handleRight() {
+    if (select.length > 0) {
+        let t = tree;
+        for (let i = 0; i < select.length - 1; i++) {
+            t = t.children[select[i]];
+        }
+        const choice = select[select.length - 1];
+        if (choice < t.children.length - 1) {
+            select[select.length - 1] = choice + 1;
+        }
+    }
+}
+function handleEnter() {
+    console.log('enter');
+    let t = tree;
+    for (let i = 0; i < select.length; i++) {
+        t = t.children[select[i]];
+    }
+    const node = {
+        children: [],
+    };
+    t.children.push(node);
+}
+
 </script>
 
 <template>
@@ -97,7 +147,14 @@ function conversationClass(item, path) {
         </div>
     </div>
 
-    <div class="p-8 bg-stone-100/50">
+    <div
+        class="p-8 bg-stone-100/50"
+        @keyup.up="handleUp"
+        @keyup.down="handleDown"
+        @keyup.left="handleLeft"
+        @keyup.right="handleRight"
+        @keyup.enter="handleEnter"
+        tabindex="-1">
         <Tree :data="tree" :path="[]" :pathColor="'#bbb'" v-slot="{ data, path }">
             <div :class="conversationClass(data, path)" class="bg-stone-200/50 border border-stone-400 rounded shadow flex gap-x-4 mx-2 px-4 pt-4 whitespace-pre-wrap max-h-32 max-w-lg min-w-[200px]">
                 <template v-if="data.who === 'system'">
