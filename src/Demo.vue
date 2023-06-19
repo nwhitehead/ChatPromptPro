@@ -3,6 +3,7 @@
 import { reactive } from 'vue';
 import List from './List.vue';
 import Conversation from './Conversation.vue';
+import Dropdown from './Dropdown.vue';
 import demo_convo from '../dialog.json?json';
 import demodrawing_svg from '../demodrawing.svg';
 
@@ -52,6 +53,20 @@ function conversationClass(item) {
             </p>
         </div>
     </div>
+
+    <div class="my-32" />
+
+    <div class="mt-8 max-w-md mx-auto">
+        <div class="">
+            <input 
+                type="text" 
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                value="10000"
+            />
+        </div>
+    </div>
+
+    <div class="my-32" />
 
     <div class="p-8 bg-stone-100/50 flex flex-col text-stone-700" tabindex="-1">
         <List :data="dialog" v-slot="{item, index}">
